@@ -7,4 +7,19 @@
 body {
   display: flex;
   justify-content: center;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/* header */
+header {
+  display: flex;
+  padding: 14px 0 5px 0;
+  justify-content: center;
+}
+
+.logo {
+  width: 197px;
+  height: 36px;
+}
+
+/* main */
+/* search-bar *//*# sourceMappingURL=style.css.map */
