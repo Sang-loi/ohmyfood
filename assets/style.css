@@ -1,1 +1,10 @@
-/*# sourceMappingURL=style.css.map */
+.main-container {
+  width: 100%;
+  max-width: 1920px;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=style.css.map */

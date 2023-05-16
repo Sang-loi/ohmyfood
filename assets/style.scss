@@ -1,0 +1,16 @@
+$primary:#9356DC;
+$secundary:#FF79DA;
+$tertiary:#99E2D0;
+$font-text:'Roboto', sans-serif;
+$font-titles: 'Shrikhand', cursive;
+
+.main-container {
+    width: 100%;
+    max-width: 1920px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
