@@ -105,4 +105,52 @@ header {
   font-weight: 500;
   font-size: 16px;
   padding: 13px 0;
+}
+
+/* fonctionnement */
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  margin: 48px 80px 26px 20px;
+}
+
+.fonctionnement ul {
+  list-style-type: none;
+  gap: 25px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 0 30px;
+}
+
+.fonctionnement li {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  background: #F7F7F7;
+  padding: 28px 28px 28px 33px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 19px;
+}
+
+.color-grey {
+  color: #7E7E7E;
+}
+
+.color-primary {
+  color: #9356DC;
+}
+
+.fa-circle-1 {
+  color: #9356DC;
+  position: absolute;
 }/*# sourceMappingURL=style.css.map */
