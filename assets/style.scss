@@ -76,7 +76,7 @@ header{
 .presentation{
     display: flex;
     justify-content: center;
-    background-color: #D2D2D2;
+    background-color: #F7F7F7;
 }
 
 .presentation ul{
@@ -163,9 +163,56 @@ h1{
     color:$primary;
 }
 
-.fa-circle-1{
+.fonctionnement-number{
     color:$primary;
-    position:absolute;
+    position: unset;
+    background-position: unset;
+    z-index: 1;
 }
+
+/* Restaurants */
+
+.restaurant{
+    background-color: #F7F7F7;
+    width: 100%;
+    box-sizing: border-box;
+    .restaurant-section{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: space-between ;
+        .card{
+            display: flex;
+            justify-content: center;
+            width: 90%;
+            height: 251px;
+            .card-content{
+                display: flex;
+                flex-direction: column;
+                box-sizing: border-box;
+            }
+            img{
+                width: 90%;
+                height: 200px;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+        }
+        
+    }
+    
+}
+
+h2{
+    font-family: $font-text;
+    font-weight: 700;
+    font-size: 24px;
+    padding-left: 20px;
+    padding-top: 54px;
+}
+
+
+
+
 
 
