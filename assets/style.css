@@ -8,8 +8,55 @@ body {
   display: flex;
   justify-content: center;
   margin: 0px;
+  flex-direction: column;
+  position: relative;
+  animation: loader 0ms 3s both;
+  background-size: cover;
+  background-color: white;
 }
 
+@keyframes loader {
+  0% {
+    transform: translatex(-9999px);
+  }
+  100% {
+    transform: translatex(0);
+  }
+}
+/* loader */
+.chargement {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 10%;
+  background-color: #9356DC;
+  padding: 50px 0 0 0;
+}
+.chargement .loader {
+  display: inline-block;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 40px;
+  height: 40px;
+  animation: spin 3s 0ms linear infinite;
+  vertical-align: middle;
+}
+.chargement::after {
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    display: none;
+  }
+}
 /* header */
 header {
   display: flex;
@@ -159,6 +206,7 @@ h2 {
   background-color: #F7F7F7;
   width: 100%;
   box-sizing: border-box;
+  padding-bottom: 48px;
 }
 .restaurant .restaurant-section {
   display: flex;
