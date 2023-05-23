@@ -68,35 +68,23 @@ header {
 /* presentation */
 .presentation {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: #F7F7F7;
-}
-
-.presentation ul {
-  list-style-type: none;
-  margin: 40px 0 0 0;
-  padding: 0;
-}
-
-.presentation li {
   font-family: "Roboto", sans-serif;
   text-align: center;
 }
-
-.presentation-title {
-  font-weight: 700;
-  font-size: 24px;
-  margin-bottom: 12px;
-  color: black;
+.presentation h1 {
+  margin: 40px 50px 12px 50px;
 }
-
-.presentation-text {
+.presentation p {
+  margin: 0 26px 27px 34px;
   color: #353535;
   font-weight: 300;
   font-size: 18px;
 }
-
-.presentation-bouton {
+.presentation a {
   color: white;
   margin: 27px 20% 57px 20%;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -105,7 +93,8 @@ header {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   font-weight: 500;
   font-size: 16px;
-  padding: 13px 0;
+  padding: 13px 18.75px;
+  text-decoration: none;
 }
 
 /* fonctionnement */
@@ -150,7 +139,7 @@ header {
   left: -12px;
 }
 
-h1 {
+h2 {
   font-weight: 700;
   font-size: 24px;
   font-family: "Roboto", sans-serif;
@@ -179,6 +168,20 @@ h1 {
   margin-left: 17px;
   margin-right: 18px;
 }
+.restaurant .restaurant-section .card-heart {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  flex-wrap: wrap;
+  z-index: 1;
+  margin-bottom: -445px;
+  margin-right: 25px;
+}
+.restaurant .restaurant-section .card-heart .restaurant-heart {
+  height: 21.0003833771px;
+  width: 22.0004234314px;
+}
 .restaurant .restaurant-section .card {
   background: #FFFFFF;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -186,26 +189,6 @@ h1 {
   margin-bottom: 18px;
   width: 100%;
   text-decoration: none;
-}
-.restaurant .restaurant-section .card .card-content {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  margin-left: 13px;
-  color: black;
-  font-family: "Roboto", sans-serif;
-}
-.restaurant .restaurant-section .card .card-content .restaurant-heart {
-  display: flex;
-  justify-content: flex-end;
-  margin: -8px 25px -8px 0;
-  height: 21px;
-}
-.restaurant .restaurant-section .card .card-content p {
-  margin-top: 0;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-size: 17px;
 }
 .restaurant .restaurant-section .card img {
   width: 100%;
@@ -215,8 +198,25 @@ h1 {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.restaurant .restaurant-section .card .card-content {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-left: 13px;
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+.restaurant .restaurant-section .card .card-content p {
+  margin-top: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  margin-bottom: 12px;
+  text-decoration: none;
+  color: black;
+}
 
-h2 {
+h3 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 24px;
@@ -224,12 +224,13 @@ h2 {
   padding-top: 54px;
 }
 
-h3 {
+h4 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 18px;
   color: #000000;
-  margin-bottom: 0px;
+  margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 /* footer */

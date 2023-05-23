@@ -75,44 +75,33 @@ header{
 
 .presentation{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     background-color: #F7F7F7;
-}
-
-.presentation ul{
-    list-style-type: none;
-    margin:40px 0 0 0;
-    padding: 0;
-}
-
-.presentation li{
     font-family: $font-text;
     text-align: center;
-}
-
-.presentation-title{
-    font-weight: 700;
-    font-size: 24px;
-    margin-bottom: 12px;
-    color: black;
-}
-
-.presentation-text{
-    color:$grey-text;
-    font-weight: 300;
-    font-size: 18px;
-}
-
-.presentation-bouton{
-    color:white;
-    margin: 27px 20% 57px 20%;
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-    transform: matrix(1, 0, 0, -1, 0, 0);
-    border-radius: 25px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    font-weight: 500;
-    font-size: 16px;
-    padding: 13px 0;
+    h1{
+        margin:40px 50px 12px 50px;
+    }
+    p{
+        margin: 0 26px 27px 34px ;
+        color:$grey-text;
+        font-weight: 300;
+        font-size: 18px;
+    }
+    a{
+        color:white;
+        margin: 27px 20% 57px 20%;
+        background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+        transform: matrix(1, 0, 0, -1, 0, 0);
+        border-radius: 25px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        font-weight: 500;
+        font-size: 16px;
+        padding: 13px 18.75px;  
+        text-decoration: none;
+    }
 }
 
 /* fonctionnement */
@@ -168,7 +157,7 @@ header{
 }
 
 
-h1{
+h2{
     font-weight: 700;
     font-size: 24px;
     font-family: $font-text;
@@ -198,6 +187,20 @@ h1{
         align-content: space-between ;
         margin-left: 17px;
         margin-right: 18px;
+        .card-heart{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-content: flex-end;
+            flex-wrap: wrap;
+            z-index: 1;
+            margin-bottom: -445px;
+            margin-right: 25px;
+                .restaurant-heart{
+                    height: 21.000383377075195px;
+                    width: 22.000423431396484px;
+                }
+        }
         .card{
             background: #FFFFFF;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -205,27 +208,6 @@ h1{
             margin-bottom: 18px;
             width: 100%;
             text-decoration: none;
-
-            .card-content{
-                display: flex;
-                flex-direction: column;
-                box-sizing: border-box;
-                margin-left: 13px;
-                color: black;
-                font-family: $font-text;
-                .restaurant-heart{
-                    display: flex;
-                    justify-content: flex-end;
-                    margin: -8px 25px -8px 0;
-                    height: 21px;
-                }
-                p{
-                    margin-top: 0;
-                    font-family: $font-text;
-                    font-weight: 300;
-                    font-size: 17px;
-                }
-            }
             img{
                 width: 100%;
                 height: 180px;
@@ -233,14 +215,28 @@ h1{
                 border-top-right-radius: 15px;
                 object-fit: cover;
             }
-            
-        }
-        
+            .card-content{
+                display: flex;
+                flex-direction: column;
+                box-sizing: border-box;
+                margin-left: 13px;
+                color: black;
+                font-family: $font-text;
+                p{
+                    margin-top: 0;
+                    font-family: $font-text;
+                    font-weight: 300;
+                    font-size: 17px;
+                    margin-bottom: 12px;
+                    text-decoration: none;
+                    color:black ;
+                }
+            }  
+        } 
     }
-    
 }
 
-h2{
+h3{
     font-family: $font-text;
     font-weight: 700;
     font-size: 24px;
@@ -248,12 +244,13 @@ h2{
     padding-top: 54px;
 }
 
-h3{
+h4{
     font-family: $font-text;
     font-weight: 700;
     font-size: 18px;
     color: #000000;
-    margin-bottom: 0px;
+    margin-bottom: 5px;
+    margin-top: 10px;
 }
 
 /* footer */
