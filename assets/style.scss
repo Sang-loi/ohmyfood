@@ -150,6 +150,7 @@ header{
     background-color: #F7F7F7;
     font-family: $font-text;
     text-align: center;
+    padding-bottom: 70px;
     h1{
         margin:40px 50px 12px 50px;
     }
@@ -159,24 +160,55 @@ header{
         font-weight: 300;
         font-size: 18px;
     }
-    a{
-        color:white;
-        margin: 27px 20% 57px 20%;
-        background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-        border-radius: 25px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    .button-effect{
+        color: white;
         font-weight: 500;
         font-size: 16px;
-        padding: 13px 18.75px;  
         text-decoration: none;
+        a{
+            color:white;
+            margin: 27px 0 57px 0;
+            border-radius: 25px;
+            background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+            padding: 13px 18.75px;
+            position: relative;
+            z-index: 1;
+            text-decoration: none;
 
-        transition: background-color 3s ease-in-out, box-shadow 3s;
-        &:hover{
-            background-color: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+            &:active {
+                &::after {
+                    opacity: 1;
+                }
+            }
+            &::after {
+                content:"";
+                border-radius: 25px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);                
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+                opacity: 0;
+                z-index: -1;
+                transition: opacity 500ms;
+            }
         }
     }
+}   
+
+@mixin pseudo-elem {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
+
+
 
 /* fonctionnement */
 
