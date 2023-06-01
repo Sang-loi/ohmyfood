@@ -419,6 +419,19 @@ footer ul li a {
   padding-right: 41px;
 }
 
+.menu {
+  animation-name: fade-menu;
+  animation-duration: 5000ms;
+  -webkit-animation: fade-menu 5000ms;
+}
+@keyframes fade-menu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .menu h5 {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -427,6 +440,8 @@ footer ul li a {
   margin-left: 13px;
   margin-top: 40px;
   position: relative;
+  width: 40px;
+  padding-bottom: 5px;
 }
 .menu .choix {
   background: #FFFFFF;
@@ -455,6 +470,9 @@ footer ul li a {
 .menu .choix .choix-plats-prix .plats {
   display: flex;
   flex-direction: column;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu .choix .choix-plats-prix .plats h6 {
   font-family: "Roboto", sans-serif;
@@ -509,4 +527,28 @@ footer ul li a {
   to {
     opacity: 0;
   }
+}
+.button-effect-menu {
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin-top: 56px;
+  margin-bottom: 55px;
+}
+.button-effect-menu a {
+  color: white;
+  margin: 27px 0 57px 0;
+  border-radius: 25px;
+  background: linear-gradient(0deg, rgb(147, 86, 220) -11%, rgb(255, 121, 218) 123%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  padding: 13px 18.75px;
+  z-index: 1;
+  text-decoration: none;
+}
+.button-effect-menu a:hover {
+  animation-name: color-button;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
 }/*# sourceMappingURL=style.css.map */
