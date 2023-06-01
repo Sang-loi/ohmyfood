@@ -271,7 +271,7 @@ h2 {
   right: 43px;
 }
 .restaurant .restaurant-section .card-heart .restaurant-heart-full:hover {
-  color: rgb(147, 86, 220);
+  color: #9356DC;
   animation-name: heart-filling;
   animation-duration: 200ms;
 }
@@ -426,6 +426,7 @@ footer ul li a {
   border-bottom: 3px solid #99E2D0;
   margin-left: 13px;
   margin-top: 40px;
+  position: relative;
 }
 .menu .choix {
   background: #FFFFFF;
@@ -435,34 +436,77 @@ footer ul li a {
   padding: 12px 0 12px 15px;
   margin-left: 13px;
   margin-right: 13px;
+  position: relative;
+  transition: all 200ms ease-in-out;
+}
+.menu .choix:hover {
+  z-index: 1;
+  padding-right: 60px;
+}
+.menu .choix .choix-plats-prix {
   display: flex;
   justify-content: space-between;
+  transition: all 200ms linear;
 }
-.menu .choix .plats {
+.menu .choix .choix-plats-prix:hover {
+  transform-origin: right;
+  justify-content: space-between;
+}
+.menu .choix .choix-plats-prix .plats {
   display: flex;
   flex-direction: column;
 }
-.menu .choix .plats h6 {
+.menu .choix .choix-plats-prix .plats h6 {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 18px;
   margin: 0;
 }
-.menu .choix .plats p {
+.menu .choix .choix-plats-prix .plats p {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 15.0431px;
   margin: 5px 0 0 0;
 }
-.menu .choix .menu-prix {
+.menu .choix .choix-plats-prix .menu-prix {
   display: flex;
   align-items: flex-end;
 }
-.menu .choix .menu-prix a {
+.menu .choix .choix-plats-prix .menu-prix a {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 15.0431px;
   padding-right: 12px;
+}
+.menu .choix .add {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 68px;
+  width: 59px;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+  background: rgb(153, 226, 208);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 0 15px 15px 0;
+  animation-name: checkbox-animation;
+  animation-duration: 200ms;
+}
+.menu .choix .add .fa-circle-check {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+
+@keyframes checkbox-animation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
