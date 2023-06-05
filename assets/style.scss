@@ -21,19 +21,10 @@ body {
     flex-direction: column;    
 
     position: relative;
-    animation: loader 0ms 3s both;
     background-size: cover;
     background-color: white;
 }
 
-  @keyframes loader{
-    0% {
-		transform: translatex(-9999px);
-	}
-	100% {
-		transform: translatex(0);
-	}
-}
 /* loader */
 .chargement{
     text-align: center;
@@ -92,6 +83,15 @@ header{
     display: flex;
     padding: 23px 0 13px 0;
     justify-content: center;
+    position: relative;
+
+    a{
+        position: absolute;
+        color: rgba(53, 53, 53, 1);
+        font-size: 20px;
+        left: 23px;
+        top: 30px;
+    }
 }
 
 .logo{
@@ -459,13 +459,15 @@ footer{
     margin-top: -40px;
     position: relative;
     width: 100%;
+    padding-bottom: 20px;
+
 }
 
 .menu-titre{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     h4{
         font-family: $font-titles;
         font-style: italic;
@@ -475,8 +477,30 @@ footer{
         margin:0;
     }
 
-    .fa-heart{
-        padding-right: 41px;        
+    .card-heart{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        z-index: 1;
+        margin-bottom: -55px;
+        margin-right: 30px;
+        
+            .restaurant-heart{
+                font-size: 21px;
+                z-index: 1;
+            }
+            .restaurant-heart-full{
+                font-size: 21px;
+                z-index: 2;
+                color: transparent;
+                right: 30px;
+                position: absolute;
+                &:hover{
+                    color: $primary;
+                    animation-name: heart-filling;
+                    animation-duration: 200ms;
+                }         
+            }
     }
 
 }
@@ -656,6 +680,63 @@ footer{
             animation-name: color-button;
             animation-duration: 500ms;
             animation-fill-mode: both;
+        }
+    }
+}
+
+/* responsive */
+
+@media screen and (min-width: 576px){
+    .restaurant{
+        .restaurant-section{
+            .card-heart{
+                margin-bottom: -1085px;
+            }
+            .card{
+                display: flex;
+                article{
+                   img{
+                    height: 500px;
+                    } 
+                }
+            }
+        }
+    }
+    
+    footer{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        .footer-logo{
+            margin-right: 20px;
+        }
+
+        ul{
+            display: flex;
+            gap: 10px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .restaurant{
+        .restaurant-section{
+            .card-heart{
+                margin-bottom: -2080px;
+            }
+            .card{
+                article{
+                   img{
+                    height: 1000px;
+                    } 
+                }
+            }
+        }
+    }
+
+    .fonctionnement{
+        ul{
+
         }
     }
 }
