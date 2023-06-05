@@ -38,7 +38,7 @@ body {
     padding: 50px 0 0 0;
     animation-duration: 2.5s;
     animation-name: chargement;
-    animation-iteration-count: 2;
+    animation-iteration-count: 1;
     animation-fill-mode: forwards;
     .loader {
         width: 40px;
@@ -52,7 +52,7 @@ body {
         animation-name: spin;
         animation-duration: 2.5s;
         animation-fill-mode: forwards;
-        animation-iteration-count: 2;
+        animation-iteration-count: 1;
     }
 }
 
@@ -290,33 +290,7 @@ h2{
         align-content: space-between ;
         margin-left: 17px;
         margin-right: 18px;
-        .card-heart{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-content: flex-end;
-            flex-wrap: wrap;
-            z-index: 1;
-            margin-bottom: -440px;
-            margin-right: 25px;
-            
-                .restaurant-heart{
-                    font-size: 21px;
-                    z-index: 1;
-                }
-                .restaurant-heart-full{
-                    font-size: 21px;
-                    z-index: 2;
-                    color: transparent;
-                    position: absolute;
-                    right: 43px;
-                    &:hover{
-                        color: $primary;
-                        animation-name: heart-filling;
-                        animation-duration: 200ms;
-                    }         
-                }
-        }
+        
         .card{
             background: #FFFFFF;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -324,10 +298,12 @@ h2{
             margin-bottom: 18px;
             width: 100%;
             text-decoration: none;
+            position: relative;
+
+
 
             article{
                 position: relative;
-
                 img{
                     width: 100%;
                     height: 180px;
@@ -360,6 +336,8 @@ h2{
                     margin-left: 14px;
                     color: black;
                     font-family: $font-text;
+                    position: relative;
+                    z-index: 3;
                     p{
                         margin-top: 0;
                         font-family: $font-text;
@@ -369,10 +347,55 @@ h2{
                         text-decoration: none;
                         color:black ;
                     }
-                }  
+                } 
             }
-            
-            
+            .card-heart{
+                           
+                right: 25px;
+                bottom: 25px;
+                position: absolute;
+                z-index: 9;
+                object-fit: cover;
+                
+                    .restaurant-heart{
+                        font-size: 21px;
+                        z-index: 1;
+                        transition: all 3000ms ease-in-out;
+                        color: black;
+                        &:hover{
+                            opacity: 1;
+                        }
+                    }
+                    .restaurant-heart-full{
+                        font-size: 21px;
+                        z-index: 2;
+                        position: absolute;
+                        left:0px;
+
+                        transition: all 3000ms ease-in-out;
+
+                        -webkit-text-fill-color: transparent;
+                        background-clip: border-box;
+                        -webkit-background-clip: text;
+                        background-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+                        background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%) ;
+
+
+
+
+                        opacity: 0;
+
+                        &:hover{
+                            opacity: 1;
+                            -webkit-background-clip: text;
+
+
+                        }
+
+
+                    }
+            }
+        
         } 
     }
 }
@@ -437,306 +460,6 @@ footer{
                 color: white;
                 text-decoration: none;
             }
-        }
-    }
-}
-
-/*** CSS des menus des restaurants ***/
-
-.photo-menu{
-    img{
-    width: 100%;
-    height: 100%;
-    }
-}
-
-/** menu **/
-
-.carte-menu{
-    background-color: #F7F7F7;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    margin-top: -40px;
-    position: relative;
-    width: 100%;
-    padding-bottom: 20px;
-
-}
-
-.menu-titre{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    h4{
-        font-family: $font-titles;
-        font-style: italic;
-        font-weight: 400;
-        font-size: 28px;
-        padding: 32px 0 0 17px;
-        margin:0;
-    }
-
-    .card-heart{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        z-index: 1;
-        margin-bottom: -55px;
-        margin-right: 30px;
-        
-            .restaurant-heart{
-                font-size: 21px;
-                z-index: 1;
-            }
-            .restaurant-heart-full{
-                font-size: 21px;
-                z-index: 2;
-                color: transparent;
-                right: 30px;
-                position: absolute;
-                &:hover{
-                    color: $primary;
-                    animation-name: heart-filling;
-                    animation-duration: 200ms;
-                }         
-            }
-    }
-
-}
-
-
-
-.menu{
-
-
-    animation-name: fade-menu;
-    animation-duration: 5000ms;
-    -webkit-animation: fade-menu 5000ms;
-
-@keyframes fade-menu{
-    0%{
-        opacity: 0;
-    }
-
-    100%{
-        opacity: 1;
-    }
-    
-}
-    h5{
-        font-family: $font-text;
-        font-weight: 300;
-        font-size: 16px;
-
-        border-bottom: 3px solid $tertiary;
-
-        margin-left: 13px;
-        margin-top: 40px;
-
-        position: relative;
-
-        width: 40px;
-        padding-bottom: 5px;
-        
-
-    }
-
-    
-
-    .choix{
-        background: #FFFFFF;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-        border-radius: 15px;
-        margin-bottom: 18px;
-
-        padding: 12px 0 12px 15px;
-        margin-left: 13px;
-        margin-right: 13px;
-
-        position: relative;
-
-        transition: all 200ms ease-in-out;
-
-        &:hover{
-            z-index: 1;
-    
-            padding-right: 60px;
-
-
-        }
-        .choix-plats-prix{
-
-            display: flex;
-            justify-content: space-between;
-
-            transition: all 200ms linear;
-
-            &:hover{
-            
-
-            transform-origin: right;
-            justify-content: space-between;
-        }
-
-            .plats{
-                display: flex;
-                flex-direction: column;
-
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-
-                h6{
-                    font-family: $font-text;
-                    font-weight: 500;
-                    font-size: 18px;
-                    margin: 0;
-            
-                }
-    
-                p{
-                    font-family: $font-text;
-                    font-style: normal;
-                    font-weight: 300;
-                    font-size: 15.0431px;
-                    margin: 5px 0 0 0;
-                }
-            }
-            .menu-prix{
-                display: flex;
-                align-items: flex-end;
-
-    
-                a{
-                    font-family: $font-text;
-                    font-style: normal;
-                    font-weight: 700;
-                    font-size: 15.0431px;
-                    padding-right: 12px;    
-                }
-    
-            } 
-        }
-
-        .add{
-            position: absolute;
-            top: 0px;
-            right: 0px;
-            height: 68px;
-            width: 59px;
-            align-content: center;
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            z-index: -1;
-            background: rgb(153, 226, 208);
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 0 15px 15px 0;
-            animation-name: checkbox-animation;
-            animation-duration: 200ms;
-    
-            .fa-circle-check{
-                color:rgba(255, 255, 255, 1);
-                font-size: 20px;
-            }
-    
-    
-        }
-        
-    }
-
-}
-
-@keyframes checkbox-animation{
-    from{
-        opacity: 1;
-    }
-
-    to{
-        opacity: 0;
-    }
-}
-
-.button-effect-menu{
-    color: white;
-    font-weight: 500;
-    font-size: 16px;
-    font-family: $font-text;
-    text-align: center;
-    margin-top: 56px;
-    margin-bottom: 55px;
-    a{
-        color:white;
-        margin: 27px 0 57px 0;
-        border-radius: 25px;
-        background: linear-gradient(0deg, rgba(147,86,220,1) -11%, rgba(255,121,218,1) 123%);
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-        padding: 13px 18.75px;
-        z-index: 1;
-        text-decoration: none;
-
-        &:hover {
-            animation-name: color-button;
-            animation-duration: 500ms;
-            animation-fill-mode: both;
-        }
-    }
-}
-
-/* responsive */
-
-@media screen and (min-width: 576px){
-    .restaurant{
-        .restaurant-section{
-            .card-heart{
-                margin-bottom: -1085px;
-            }
-            .card{
-                display: flex;
-                article{
-                   img{
-                    height: 500px;
-                    } 
-                }
-            }
-        }
-    }
-    
-    footer{
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: center;
-        .footer-logo{
-            margin-right: 20px;
-        }
-
-        ul{
-            display: flex;
-            gap: 10px;
-        }
-    }
-}
-
-@media screen and (min-width: 1024px){
-    .restaurant{
-        .restaurant-section{
-            .card-heart{
-                margin-bottom: -2080px;
-            }
-            .card{
-                article{
-                   img{
-                    height: 1000px;
-                    } 
-                }
-            }
-        }
-    }
-
-    .fonctionnement{
-        ul{
-
         }
     }
 }
