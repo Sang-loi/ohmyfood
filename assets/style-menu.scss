@@ -47,7 +47,6 @@ header{
 
 /* main */
 
-/*** CSS des menus des restaurants ***/
 
 .photo-menu{
     img{
@@ -113,156 +112,140 @@ header{
 
 
 
+
+.menu-animation-0{
+    animation-name: fade-menu;
+    animation-duration: 3000ms;
+    }
+
+    .menu-animation-1{
+        animation-name: fade-menu;
+        animation-duration: 5000ms;
+
+    }
+
+    .menu-animation-2{
+        animation-name: fade-menu;
+        animation-duration: 7000ms;
+    }
+
+    @keyframes fade-menu{
+        0%{
+            opacity: 0;
+        }
+    
+        100%{
+            opacity: 1;
+        }
+    }
+
 .menu{
 
-
-    animation-name: fade-menu;
-    animation-duration: 5000ms;
-    -webkit-animation: fade-menu 5000ms;
-
-@keyframes fade-menu{
-    0%{
-        opacity: 0;
-    }
-
-    100%{
-        opacity: 1;
-    }
-    
-}
     h5{
         font-family: $font-text;
         font-weight: 300;
         font-size: 16px;
-
         border-bottom: 3px solid $tertiary;
-
         margin-left: 13px;
         margin-top: 40px;
-
         position: relative;
-
         width: 40px;
         padding-bottom: 5px;
-        
-
     }
 
-    
-
     .choix{
-        background: #FFFFFF;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-        border-radius: 15px;
-        margin-bottom: 18px;
-
-        padding: 12px 0 12px 15px;
-        margin-left: 13px;
-        margin-right: 13px;
-
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 20px;
+        margin: 7px 25px 5px 25px;
+        text-align: left;
+        padding: 12px 15px;
         position: relative;
+        overflow: hidden;
+        
 
-        transition: all 200ms ease-in-out;
+        &:hover {
+            .menu-prix a {
+              transform: translateX(-59px);
+            }
+      
+            .menu-prix .add {
+              transform: translateX(-59px);
+            }
+          }
 
-        &:hover{
-            z-index: 1;
-    
-            padding-right: 60px;
-
-
-        }
-        .choix-plats-prix{
-
-            display: flex;
-            justify-content: space-between;
-
-            transition: all 200ms linear;
-
-            &:hover{
-            
-
-            transform-origin: right;
-            justify-content: space-between;
-        }
-
+        
             .plats{
-                display: flex;
-                flex-direction: column;
-
+                overflow: hidden;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-
                 h6{
                     font-family: $font-text;
                     font-weight: 500;
                     font-size: 18px;
                     margin: 0;
-            
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
-    
                 p{
                     font-family: $font-text;
                     font-style: normal;
                     font-weight: 300;
                     font-size: 15.0431px;
                     margin: 5px 0 0 0;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
             }
             .menu-prix{
                 display: flex;
-                align-items: flex-end;
+                justify-content: space-between;
+                position: relative;
+                transition: transform 0.5s ease-in-out;
 
-    
                 a{
                     font-family: $font-text;
                     font-style: normal;
                     font-weight: 700;
                     font-size: 15.0431px;
-                    padding-right: 12px;    
+                    padding-left: 10px;
+                    padding-top: 26px;
+                    transition: transform 0.5s ease-in-out;
+                }
+
+                .add{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #99e2d0;
+                    width: 59px;
+                    height: 69px;
+                    border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    position: absolute;
+                    top: -12px;
+                    left: 51px;
+                    transition: transform 0.5s ease-in-out;
+                    
+            
+                    .fa-circle-check{
+                        color: rgba(255, 255, 255, 1);                        
+                        font-size: 20px;
+                    }
+            
+            
                 }
     
-            } 
-        }
-
-        .add{
-            position: absolute;
-            top: 0px;
-            right: 0px;
-            height: 68px;
-            width: 59px;
-            align-content: center;
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            z-index: -1;
-            background: rgb(153, 226, 208);
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 0 15px 15px 0;
-            animation-name: checkbox-animation;
-            animation-duration: 200ms;
-    
-            .fa-circle-check{
-                color:rgba(255, 255, 255, 1);
-                font-size: 20px;
-            }
-    
-    
-        }
+            }        
         
     }
-
 }
 
-@keyframes checkbox-animation{
-    from{
-        opacity: 1;
-    }
 
-    to{
-        opacity: 0;
-    }
-}
 
 .button-effect-menu{
     color: white;
