@@ -356,60 +356,48 @@ h2{
                 position: absolute;
                 z-index: 9;
                 object-fit: cover;
-                
-                    .restaurant-heart{
-                        font-size: 21px;
-                        z-index: 1;
-                        transition: all 3000ms ease-in-out;
-                        color: black;
-                        &:hover{
-                            opacity: 1;
-                        }
-                    }
-                    .restaurant-heart-full{
-                        font-size: 21px;
-                        z-index: 2;
-                        position: absolute;
-                        left:0px;
 
-                        transition: all 3000ms ease-in-out;
-
-                        -webkit-text-fill-color: transparent;
-                        background-clip: border-box;
-                        -webkit-background-clip: text;
-                        background-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-                        background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%) ;
-
-
-
-
+                &:hover{
+                    .restaurant-heart {
                         opacity: 0;
+                      }
+                      .restaurant-heart-full {
+                        transform: scale(1);
+                        opacity: 1;
+                      }
+                }
+                
+                .restaurant-heart{
+                    font-size: 21px;
+                    z-index: 1;
+                    transition: opacity 0.3s ease-in-out;
 
-                        &:hover{
-                            opacity: 1;
-                            -webkit-background-clip: text;
-
-
-                        }
-
-
+                    color: black;
+                    &:hover{
+                        opacity: 0;
                     }
+                }
+                .restaurant-heart-full{
+                    font-size: 21px;
+                    z-index: 2;
+                    position: absolute;
+                    overflow: hidden;
+
+                    left: 0px;
+
+                    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    transform: scale(0);
+                    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
             }
         
         } 
     }
-}
-
-@keyframes heart-filling{
-
-    from{
-        opacity: 0;
-    }
-
-    to{
-        opacity: 1;
-    }
-
 }
 
 h3{
