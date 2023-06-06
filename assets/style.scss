@@ -173,37 +173,16 @@ header{
             padding: 13px 18.75px;
             z-index: 1;
             text-decoration: none;
+            transition: opacity 500ms, box-shadow 500ms;
+
 
             &:hover {
-                animation-name: color-button;
-                animation-duration: 500ms;
-                animation-fill-mode: both;
+                opacity: 0.9;
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
             }
         }
     }
 }
-
-@keyframes color-button{
-    from{
-        opacity: 1;
-
-    }
-        
-    to{
-        opacity: 0.9;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-    }
-}
-
-@mixin pseudo-elem {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
 
 
 /* fonctionnement */
@@ -290,7 +269,6 @@ h2{
         align-content: space-between ;
         margin-left: 17px;
         margin-right: 18px;
-        
         .card{
             background: #FFFFFF;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -299,9 +277,6 @@ h2{
             width: 100%;
             text-decoration: none;
             position: relative;
-
-
-
             article{
                 position: relative;
                 img{
@@ -310,25 +285,22 @@ h2{
                     border-top-left-radius: 15px;
                     border-top-right-radius: 15px;
                     object-fit: cover;
-                }
-                    
+                } 
                 .new{
-                        font-family: $font-text;
-                        font-weight: 500;
-                        font-size: 14px;
-                        text-align: center;
-                        color: #008766; 
-                        background: #99E2D0;
-                        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-                        border-radius: 2px;
-                        z-index: 2;
-                        padding: 7px 9px;
-
-                        position: absolute;
-                        top: 13px;
-                        right: 12px;
+                    font-family: $font-text;
+                    font-weight: 500;
+                    font-size: 14px;
+                    text-align: center;
+                    color: #008766; 
+                    background: #99E2D0;
+                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+                    border-radius: 2px;
+                    z-index: 2;
+                    padding: 7px 9px;
+                    position: absolute;
+                    top: 13px;
+                    right: 12px;
                 }
-
                 .card-content{
                     display: flex;
                     flex-direction: column;
@@ -349,14 +321,12 @@ h2{
                     }
                 } 
             }
-            .card-heart{
-                           
+            .card-heart{          
                 right: 25px;
                 bottom: 25px;
                 position: absolute;
                 z-index: 9;
                 object-fit: cover;
-
                 &:hover{
                     .restaurant-heart {
                         opacity: 0;
@@ -366,12 +336,10 @@ h2{
                         opacity: 1;
                       }
                 }
-                
                 .restaurant-heart{
                     font-size: 21px;
                     z-index: 1;
                     transition: opacity 0.3s ease-in-out;
-
                     color: black;
                     &:hover{
                         opacity: 0;
@@ -382,9 +350,7 @@ h2{
                     z-index: 2;
                     position: absolute;
                     overflow: hidden;
-
                     left: 0px;
-
                     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
@@ -395,7 +361,6 @@ h2{
                     }
                 }
             }
-        
         } 
     }
 }
@@ -450,4 +415,40 @@ footer{
             }
         }
     }
+}
+
+/* responsive desktop more or equal to 1024 px*/
+
+@media (min-width: 1024px){
+    .fonctionnement{
+        align-items: center;
+        h2{
+            padding-right: 732px;
+            margin-left:0;
+        }
+        ul{
+            flex-direction: row;
+            justify-content: center;
+            gap: 32px;
+            li{
+                padding-right: 66px;
+            }
+        }
+    
+    }
+
+    .restaurant-section{
+        flex-direction: row;
+    }
+    
+    
+
+}
+
+
+
+/* responsive tablet more or equal to 768 px*/
+
+@media (min-width: 767.98px){
+
 }
