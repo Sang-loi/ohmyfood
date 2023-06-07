@@ -423,6 +423,47 @@ footer{
         }
 }
 
+
+
+/* responsive tablet more or equal to 768 px*/
+
+@media (min-width: 767.98px){
+    footer{
+        display: flex;
+        justify-content: space-between;
+        ul{
+            display:flex;
+            flex-direction: column;
+            gap: 7px;
+            align-items: flex-end;
+        }
+        .font-400{
+            padding-right: 40px;
+            margin-top: 16px;
+        }
+    }
+
+    .restaurant {
+        padding-bottom: 0;
+        .restaurant-section{
+            display: flex;
+            justify-content: space-evenly;
+            h3{ 
+            margin-left: 0;
+            width: 90%;
+            }
+            .card {    
+                width: 45%;
+                margin-bottom: 50px;
+            }
+        } 
+    }
+
+
+
+}
+
+
 /* responsive desktop more or equal to 1024 px*/
 
 @media (min-width: 1024px){
@@ -473,22 +514,10 @@ footer{
             flex-direction: row-reverse;
             gap: 7px;
             align-items: flex-end;
-            li{
-
-            }
-            
         }
         .font-400{
             padding-right: 270px ;
             margin-top: 50px;
         }
     }
-}
-
-
-
-/* responsive tablet more or equal to 768 px*/
-
-@media (min-width: 767.98px){
-
 }
