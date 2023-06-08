@@ -26,7 +26,7 @@ body {
 }
 
 /* loader */
-.chargement{
+.loading{
     text-align: center;
     position: fixed;
     top: 0;
@@ -103,7 +103,7 @@ header{
 
 /* formulaire */
 
-.formulaire{
+.form{
     display: flex;
     justify-content: center;
     background-color: #EAEAEA;
@@ -120,7 +120,7 @@ header{
     padding-left: 32px; 
 }
 
-.formulaire-Paris{
+.form-Paris{
     color: $grey-text;
     font-weight: 500;
     font-size: 16px;
@@ -187,7 +187,7 @@ header{
 
 /* fonctionnement */
 
-.fonctionnement{
+.operating{
     display:flex;
     flex-direction: column;
 
@@ -219,7 +219,7 @@ header{
             position: relative;
             z-index: 3;
 
-            .fonctionnement-number{
+            .operating-number{
                 color:#F6F6F6;
                 z-index: 1;
                 border: solid $primary;
@@ -467,7 +467,7 @@ footer{
 /* responsive desktop more or equal to 1024 px*/
 
 @media (min-width: 1024px){
-    .fonctionnement{
+    .operating{
         align-items: center;
         h2{
             padding-right: 732px;

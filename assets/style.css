@@ -15,7 +15,7 @@ body {
 }
 
 /* loader */
-.chargement {
+.loading {
   text-align: center;
   position: fixed;
   top: 0;
@@ -30,7 +30,7 @@ body {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
-.chargement .loader {
+.loading .loader {
   width: 40px;
   height: 40px;
   border: 16px solid #f3f3f3;
@@ -85,7 +85,7 @@ header a {
 
 /* main */
 /* formulaire */
-.formulaire {
+.form {
   display: flex;
   justify-content: center;
   background-color: #EAEAEA;
@@ -102,7 +102,7 @@ header a {
   padding-left: 32px;
 }
 
-.formulaire-Paris {
+.form-Paris {
   color: #353535;
   font-weight: 500;
   font-size: 16px;
@@ -168,11 +168,11 @@ header a {
 }
 
 /* fonctionnement */
-.fonctionnement {
+.operating {
   display: flex;
   flex-direction: column;
 }
-.fonctionnement ul {
+.operating ul {
   list-style-type: none;
   gap: 25px;
   display: flex;
@@ -181,7 +181,7 @@ header a {
   position: relative;
   z-index: 2;
 }
-.fonctionnement ul li {
+.operating ul li {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -196,7 +196,7 @@ header a {
   position: relative;
   z-index: 3;
 }
-.fonctionnement ul li .fonctionnement-number {
+.operating ul li .operating-number {
   color: #F6F6F6;
   z-index: 1;
   border: solid #9356DC;
@@ -422,19 +422,19 @@ footer .font-400 {
 }
 /* responsive desktop more or equal to 1024 px*/
 @media (min-width: 1024px) {
-  .fonctionnement {
+  .operating {
     align-items: center;
   }
-  .fonctionnement h2 {
+  .operating h2 {
     padding-right: 732px;
     margin-left: 0;
   }
-  .fonctionnement ul {
+  .operating ul {
     flex-direction: row;
     justify-content: center;
     gap: 32px;
   }
-  .fonctionnement ul li {
+  .operating ul li {
     padding-right: 66px;
   }
   .restaurant {
