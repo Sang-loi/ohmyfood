@@ -70,8 +70,8 @@ main .card-menu {
 .menu-title .card-heart {
   position: relative;
   z-index: 5;
-  padding-right: 40px;
-  padding-top: 30px;
+  margin-right: 40px;
+  margin-top: 30px;
 }
 .menu-title .card-heart:hover .restaurant-heart {
   opacity: 0;
@@ -150,17 +150,23 @@ main .card-menu {
   position: relative;
   overflow: hidden;
 }
-.menu .choices:hover .menu-price a {
+.menu .choices:hover .plats {
+  margin-right: 59px;
+}
+.menu .choices:hover .menu-price {
   transform: translateX(-59px);
 }
-.menu .choices:hover .menu-price .add {
+.menu .choices:hover .menu-price .menu-price a {
+  transform: translateX(-59px);
+}
+.menu .choices:hover .menu-price .menu-price .add {
   transform: translateX(-59px);
 }
 .menu .choices .plats {
   overflow: hidden;
   white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
+  transition: all 0.5s ease-in-out;
 }
 .menu .choices .plats h3 {
   font-family: "Roboto", sans-serif;
@@ -195,6 +201,9 @@ main .card-menu {
   padding-left: 10px;
   padding-top: 26px;
   transition: transform 0.5s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu .choices .menu-price .add {
   display: flex;

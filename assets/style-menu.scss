@@ -87,8 +87,8 @@ main{
     .card-heart{                
     position: relative;
     z-index: 5;
-    padding-right: 40px;
-    padding-top: 30px;
+    margin-right: 40px;
+    margin-top: 30px;
         &:hover{
             .restaurant-heart {
                 opacity: 0;
@@ -178,18 +178,25 @@ main{
         position: relative;
         overflow: hidden;
         &:hover {
-            .menu-price a {
-              transform: translateX(-59px);
+            .plats{
+                margin-right: 59px;
             }
-            .menu-price .add {
-              transform: translateX(-59px);
+            .menu-price{
+                transform: translateX(-59px);
+                .menu-price a {
+                    transform: translateX(-59px);
+                  }
+                  .menu-price .add {
+                    transform: translateX(-59px);
+                  }
             }
+            
         }
         .plats{
             overflow: hidden;
             white-space: nowrap;
-            overflow: hidden;
             text-overflow: ellipsis;
+            transition: all 0.5s ease-in-out;
             h3{
                 font-family: $font-text;
                 font-weight: 500;
@@ -223,6 +230,9 @@ main{
                 padding-left: 10px;
                 padding-top: 26px;
                 transition: transform 0.5s ease-in-out;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
 
             .add{
